@@ -97,12 +97,39 @@ function updateYear() {
 }
 
 // ============================================================
+// DARK MODE TOGGLE
+// ============================================================
+function initDarkMode() {
+  const darkModeBtn = document.getElementById("dark-mode-btn");
+  const htmlElement = document.documentElement;
+  
+  // Check if user has saved preference
+  const savedTheme = localStorage.getItem("theme") || "light";
+  htmlElement.setAttribute("data-theme", savedTheme);
+  updateButtonText(savedTheme);
+  
+  // Toggle dark mode on button click
+  darkModeBtn.addEventListener("click", () => {
+    const currentTheme = htmlElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    
+    htmlElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    updateButtonText(newTheme);
+  });
+}
+
+function updateButtonText(theme) {
+  const darkModeBtn = document.getElementById("dark-mode-btn");
+  darkModeBtn.textContent = theme === "dark" ? "☀️" : "🌙";
+}
+
+// ============================================================
 // INIT
 // ============================================================
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   renderSkills();
   updateYear();
-
-  // TODO: Wire up your dark mode toggle button here once you add it
+  initDarkMode();
 });

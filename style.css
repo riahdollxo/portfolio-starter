@@ -16,9 +16,21 @@
   --transition: 0.2s ease;
 }
 
-/* TODO: Add a [data-theme="dark"] block here for dark mode.
-   Copilot can generate this for you — try:
-   "Add a dark mode theme using CSS custom properties" */
+/* Dark Mode Theme */
+[data-theme="dark"] {
+  --color-bg: #1a1a2e;
+  --color-bg-alt: #16213e;
+  --color-text: #e0e0e0;
+  --color-text-muted: #a0a0a0;
+  --color-accent: #6366f1;
+  --color-accent-hover: #818cf8;
+  --color-border: #2d3748;
+}
+
+/* Smooth transition when toggling dark mode */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 /* ============================================================
    RESET & BASE
@@ -85,6 +97,24 @@ a:hover {
 
 .nav-links a:hover {
   color: var(--color-accent);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+
+.dark-mode-toggle:hover {
+  background: var(--color-bg-alt);
 }
 
 /* TODO: The nav isn't responsive on mobile yet.

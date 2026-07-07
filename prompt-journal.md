@@ -19,8 +19,8 @@ For each entry, note:
 ## Phase 1 — Setup & Orientation
 
 ### Entry 1
-- **Feature/task:** 
-- **Copilot feature used:** 
+- **Feature/task:** Update tagline
+- **Copilot feature used:**  ASK
 - **Prompt:** Write me a tagline. I am a Junior Computer Science Major at FAMU and I am passionate about sustainable AI.
   > 
 - **Result:** Junior CS major at FAMU passionate about building sustainable AI solutions.

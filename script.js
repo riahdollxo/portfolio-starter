@@ -85,7 +85,13 @@ function renderSkills() {
 // toggle that saves preference to localStorage"
 // ============================================================
 function toggleDarkMode() {
-  // Your implementation here
+  const htmlElement = document.documentElement;
+  const currentTheme = htmlElement.getAttribute("data-theme") || "light";
+  const nextTheme = currentTheme === "dark" ? "light" : "dark";
+
+  htmlElement.setAttribute("data-theme", nextTheme);
+  localStorage.setItem("theme", nextTheme);
+  updateButtonText(nextTheme);
 }
 
 // ============================================================
@@ -97,25 +103,27 @@ function updateYear() {
 }
 
 // ============================================================
-// DARK MODE TOGGLE
+// THEME PICKER
 // ============================================================
-function initDarkMode() {
+function initTheme() {
   const darkModeBtn = document.getElementById("dark-mode-btn");
   const htmlElement = document.documentElement;
-  
-  // Check if user has saved preference
+
   const savedTheme = localStorage.getItem("theme") || "light";
+  const savedAccent = localStorage.getItem("accent") || "neon-pink";
+
   htmlElement.setAttribute("data-theme", savedTheme);
+  htmlElement.setAttribute("data-accent", savedAccent);
   updateButtonText(savedTheme);
-  
-  // Toggle dark mode on button click
-  darkModeBtn.addEventListener("click", () => {
-    const currentTheme = htmlElement.getAttribute("data-theme");
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-    
-    htmlElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    updateButtonText(newTheme);
+
+  darkModeBtn.addEventListener("click", toggleDarkMode);
+
+  document.querySelectorAll(".accent-swatch").forEach((button) => {
+    button.addEventListener("click", () => {
+      const accent = button.dataset.accent;
+      htmlElement.setAttribute("data-accent", accent);
+      localStorage.setItem("accent", accent);
+    });
   });
 }
 
@@ -131,5 +139,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   renderSkills();
   updateYear();
-  initDarkMode();
+  initTheme();
 });

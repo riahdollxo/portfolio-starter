@@ -9,6 +9,7 @@
   --color-text-muted: #555577;
   --color-accent: #4f46e5;
   --color-accent-hover: #4338ca;
+  --color-accent-text: #ffffff;
   --color-border: #e2e8f0;
   --font-main: 'Segoe UI', system-ui, sans-serif;
   --radius: 10px;
@@ -24,7 +25,44 @@
   --color-text-muted: #a0a0a0;
   --color-accent: #6366f1;
   --color-accent-hover: #818cf8;
+  --color-accent-text: #ffffff;
   --color-border: #2d3748;
+}
+
+[data-accent="neon-yellow"] {
+  --color-accent: #eaff00;
+  --color-accent-hover: #c8e600;
+  --color-accent-text: #111111;
+}
+
+[data-accent="neon-pink"] {
+  --color-accent: #ff3df2;
+  --color-accent-hover: #e62ad8;
+  --color-accent-text: #111111;
+}
+
+[data-accent="neon-green"] {
+  --color-accent: #39ff14;
+  --color-accent-hover: #2fe30f;
+  --color-accent-text: #111111;
+}
+
+[data-accent="neon-teal"] {
+  --color-accent: #00ffd5;
+  --color-accent-hover: #00e0bb;
+  --color-accent-text: #111111;
+}
+
+[data-accent="pastel"] {
+  --color-accent: #f7a8c4;
+  --color-accent-hover: #ef8db0;
+  --color-accent-text: #1a1a2e;
+}
+
+[data-accent="black"] {
+  --color-accent: #111111;
+  --color-accent-hover: #000000;
+  --color-accent-text: #ffffff;
 }
 
 /* Smooth transition when toggling dark mode */
@@ -72,6 +110,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
   padding: 1rem 2rem;
   background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
@@ -117,6 +157,35 @@ a:hover {
   background: var(--color-bg-alt);
 }
 
+.theme-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.accent-swatch {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.accent-swatch:hover {
+  transform: scale(1.1);
+  border-color: var(--color-accent);
+}
+
+.accent-swatch[data-accent="neon-yellow"] { background: #eaff00; }
+.accent-swatch[data-accent="neon-pink"] { background: #ff3df2; }
+.accent-swatch[data-accent="neon-green"] { background: #39ff14; }
+.accent-swatch[data-accent="neon-teal"] { background: #00ffd5; }
+.accent-swatch[data-accent="pastel"] { background: #f7a8c4; }
+.accent-swatch[data-accent="black"] { background: #111111; }
+
 /* TODO: The nav isn't responsive on mobile yet.
    Ask Copilot: "Make this navbar collapse into a hamburger menu on small screens" */
 
@@ -161,7 +230,7 @@ a:hover {
   display: inline-block;
   padding: 0.75rem 1.75rem;
   background: var(--color-accent);
-  color: #fff !important;
+  color: var(--color-accent-text) !important;
   border-radius: var(--radius);
   font-weight: 600;
   transition: background var(--transition), transform var(--transition);
@@ -180,7 +249,7 @@ a:hover {
 
 .btn-outline:hover {
   background: var(--color-accent);
-  color: #fff !important;
+  color: var(--color-accent-text) !important;
 }
 
 /* ============================================================

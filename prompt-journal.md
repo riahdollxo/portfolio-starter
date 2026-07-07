@@ -45,48 +45,47 @@ For each entry, note:
 
 ---
 
-### Entry 4 — Dark mode
-- **Copilot feature used:** 
-- **Prompt:**
-  > 
-- **Result:** 
-- **What I changed or did next:** 
+### Entry 4 — Task 2A: About Section
+- **Copilot feature used:** ASK
+- **Prompt:** Write a short professional bio for an IT student at FAMU interested in software development, cybersecurity, and AI. Also mention I run a nails business and fashion styling business.
+- **Result:** Got a well-written bio that incorporated all my interests and side businesses naturally.
+- **What I changed or did next:** Updated index.html with the bio and customized some wording to add more personality and specific details about FAMU.
 
 ---
 
-### Entry 5 — Responsive layout
-- **Copilot feature used:** 
-- **Prompt:**
-  > 
-- **Result:** 
-- **What I changed or did next:** 
+### Entry 5 — Task 2B: Add Projects
+- **Copilot feature used:** ASK
+- **Prompt:** How do I add my projects to the portfolio JavaScript array? I have three projects: Bloom Break (wellness app), Stocked Up (inventory management), and FreshWater Finder (water resource app).
+- **Result:** Learned the project object structure and formatted all three projects with titles, descriptions, tags, and demo links.
+- **What I changed or did next:** Updated script.js with all three real projects from my GitHub.
+
+---
+
+### Entry 6 — Task 2C: Dark Mode CSS
+- **Copilot feature used:** AGENT MODE
+- **Prompt:** Add CSS for dark mode theme. I need a [data-theme="dark"] block with dark colors and a button style for the dark mode toggle.
+- **Result:** Successfully added dark mode CSS variables and button styling to style.css.
+- **What I changed or did next:** Added the dark theme color scheme and smooth transitions between light/dark modes.
+
+---
+
+### Entry 7 — Task 2C: Dark Mode JavaScript
+- **Copilot feature used:** AGENT MODE
+- **Prompt:** Implement the dark mode toggle JavaScript. It should switch a data-theme attribute and save the preference to localStorage.
+- **Result:** Got the initDarkMode() and updateButtonText() functions that handle the toggle logic and persistence.
+- **What I changed or did next:** Added the functions to script.js and wired up the DOMContentLoaded event to initialize dark mode on page load.
 
 ---
 
 ## Phase 3 — Independent Feature
 
-**Feature I chose:** 
+**Feature I chose:** Dark mode toggle with localStorage persistence
 
-### Entry 6
-- **Copilot feature used:** 
-- **Prompt:**
-  > 
-- **Result:** 
-- **What I changed or did next:** 
-
-### Entry 7
-- **Copilot feature used:** 
-- **Prompt:**
-  > 
-- **Result:** 
-- **What I changed or did next:** 
-
-### Entry 8 — A prompt that didn't work well
-- **Copilot feature used:** 
-- **What I asked:**
-  > 
-- **What went wrong:** 
-- **How I fixed it (revised prompt or manual edit):** 
+### Entry 8 — Testing Dark Mode
+- **Copilot feature used:** ASK
+- **Prompt:** How do I test that dark mode is working correctly and that the preference saves to localStorage?
+- **Result:** Got tips on browser DevTools, localStorage inspection, and manual testing.
+- **What I changed or did next:** Tested dark mode toggle, verified the button changes emoji (🌙 to ☀️), and confirmed localStorage persists the preference on page reload. 
 
 ---
 

@@ -317,7 +317,14 @@ h2::after {
 /* ============================================================
    ABOUT
    ============================================================ */
-.about-text {
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: start;
+}
+
+   .about-text {
   max-width: 650px;
   line-height: 1.7;
 }

@@ -194,7 +194,34 @@ a:hover {
 /* ============================================================
    HERO
    ============================================================ */
-.hero {
+.hero-float-element {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.12;
+  z-index: 0;
+  animation: float 8s ease-in-out infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-40px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+   .hero {
   min-height: 80vh;
   display: flex;
   align-items: center;

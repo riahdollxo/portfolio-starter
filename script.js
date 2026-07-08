@@ -132,6 +132,10 @@ function updateButtonText(theme) {
   darkModeBtn.textContent = theme === "dark" ? "☀️" : "🌙";
 }
 
+function logEasterEgg(modeName, emoji) {
+  console.log(`${emoji} ${modeName} Activated`);
+}
+
 // ============================================================
 // HIDDEN MODES
 // ============================================================
@@ -165,6 +169,7 @@ function initTripMode() {
 
   function activateTripMode() {
     htmlElement.classList.add("trip-mode");
+    logEasterEgg("Trip Mode", "🌀");
 
     if (tripModeTimer) clearTimeout(tripModeTimer);
     tripModeTimer = setTimeout(() => {
@@ -206,6 +211,7 @@ function initExtraEasterEggs() {
     logo.addEventListener("dblclick", (event) => {
       event.preventDefault();
       activateTemporaryMode(htmlElement, "mirror-mode", 4200);
+      logEasterEgg("Mirror Mode", "🪞");
     });
   }
 
@@ -214,6 +220,7 @@ function initExtraEasterEggs() {
       if (!event.altKey) return;
       event.preventDefault();
       activateTemporaryMode(htmlElement, "static-mode", 4800);
+      logEasterEgg("Static Mode", "📺");
     }, true);
   }
 
@@ -222,6 +229,7 @@ function initExtraEasterEggs() {
       if (!event.shiftKey) return;
       event.preventDefault();
       activateTemporaryMode(htmlElement, "prism-mode", 5000);
+      logEasterEgg("Prism Mode", "💎");
     }, true);
   });
 }
@@ -268,6 +276,7 @@ function initLavaWordEgg() {
 // INIT
 // ============================================================
 document.addEventListener("DOMContentLoaded", () => {
+  console.log(`👀 Curious, aren't we?\n\nWelcome to my portfolio.\n\nYou found the console...\nThere may be more hidden throughout the site.\n\nHappy exploring. 💻✨`);
   renderProjects();
   renderSkills();
   updateYear();

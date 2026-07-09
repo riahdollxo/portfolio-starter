@@ -111,7 +111,7 @@ I learned that better prompts come from explaining the full vision instead of on
 
 **4. What's one part of the codebase you now understand better than at the start?**
 
-
+Something I understand better now is how different parts of a website work together to create an experience. I learned more about how JavaScript handles interactions, animations, and changes based on what a user does. Small details in the code can completely change how someone feels while using a site.
 ---
 
 **5. What would you build or improve next?**

@@ -93,24 +93,27 @@ For each entry, note:
 
 **1. What feature are you most proud of?**
 
-*(Write a few sentences.)*
+The feature I am most proud of is definitely the hidden easter eggs I added to my portfolio. I really wanted my portfolio to feel like me and not just be a basic page showing my projects. Since my design already has a trippy, colorful theme, adding things like trip mode, mirror mode, static mode, and prism mode felt like a fun way to bring the whole idea together. I like that they are hidden because it gives people a reason to explore and interact with the site.
 
 ---
 
 **2. Describe a time Copilot gave you something wrong or unhelpful. What did you do?**
 
-*(Be specific — this is one of the most valuable things to reflect on.)*
+ Copilot gave me something that was not really helpful when it tried to change too much of my code instead of building on what I already created. I was trying to add my lava lamp feature and I liked my original design and wanted to upgrade it, not completely replace it. I had to learn how to be more specific with my prompts and tell Copilot exactly what I wanted to keep and what I wanted it to add. I ended up taking the pieces that worked and changing the parts that didn’t match what I had in mind.
 
 ---
 
 **3. What did you learn about writing better prompts?**
 
-*(What made a prompt work well? What made one fail?)*
+I learned that better prompts come from explaining the full vision instead of only asking for code. When I told Copilot what kind of feeling I wanted the user to have, the style I was going for, and what parts of my site I didn’t want changed, the results improved a lot. It felt more like working with a coding partner instead of just having something generate code for me.
 
 ---
 
 **4. What's one part of the codebase you now understand better than at the start?**
 
+Something I understand better now is how different parts of a website work together to create an experience. I learned more about how JavaScript handles interactions, animations, and changes based on what a user does. Small details in the code can completely change how someone feels while using the site.
 ---
 
 **5. What would you build or improve next?**
+
+Something I want to work on next is adding even more interaction to the portfolio. I have been thinking about adding a feature where visitors can leave me a message or find another hidden surprise. I want people who visit my portfolio to remember it and see my personality and creativity through my code.
